@@ -17,6 +17,16 @@ class AuthService {
     return signInWithPopup(this.firebaseAuth, authProvider);
   }
 
+  onAuthChange(onUserChanged) {
+    this.firebaseAuth.onAuthStateChanged(user => {
+      onUserChanged(user);
+    });
+  }
+
+  logout() {
+    this.firebaseAuth.signOut();
+  }
+
   getProvider(providerName) {
     switch (providerName) {
       case 'Google':
