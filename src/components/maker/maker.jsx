@@ -56,11 +56,16 @@ const Maker = ({ authService }) => {
     });
   });
 
+  const handleAdd = card => {
+    const updated = [...cards, card];
+    setCards(updated);
+  };
+
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.main}>
-        <Editor cards={cards} />
+        <Editor cards={cards} onAdd={handleAdd} />
         <Preview cards={cards} />
       </div>
       <Footer />
