@@ -8,7 +8,10 @@ const Login = ({ authService }) => {
   const history = useHistory();
 
   const goToMaker = userId => {
-    history.push({ pathname: '/maker', state: { id: userId } });
+    history.push({
+      pathname: '/maker',
+      state: { id: userId },
+    });
   };
 
   const onLogin = event => {
