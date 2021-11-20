@@ -12,7 +12,7 @@ function App({ FileInput, authService, cardRepository }) {
           <Route exact path="/">
             <Login authService={authService} />
           </Route>
-          <Route path="/maker" exact>
+          <Route path="/maker">
             <Maker
               FileInput={FileInput}
               authService={authService}
