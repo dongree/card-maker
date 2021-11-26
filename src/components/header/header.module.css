@@ -1,10 +1,10 @@
-@value makerGreen, makerWhite, makerBlack from '../../common/colors.css';
+@value makerPink, makerWhite, makerBlack, makerGreen, makerPinkViolet from '../../common/colors.css';
 
 .header {
   width: 100%;
   text-align: center;
   padding: 0.5em 0;
-  background-color: makerGreen;
+  background: makerPinkViolet;
   position: relative;
 }
 
@@ -23,9 +23,14 @@
   top: 1em;
   padding: 0.5em;
   border-radius: 10%;
-  background-color: makerBlack;
-  color: makerWhite;
+  background-color: makerGreen;
+  color: makerBlack;
   outline: 0;
   border: 0;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.logout:hover {
+  transform: scale(1.05);
 }

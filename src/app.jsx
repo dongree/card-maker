@@ -3,8 +3,13 @@ import React from 'react';
 import styles from './app.module.css';
 import Login from './components/login/login';
 import Maker from './components/maker/maker';
+import { useEffect } from 'react/cjs/react.development';
 
 function App({ FileInput, authService, cardRepository }) {
+  useEffect(() => {
+    document.title = 'EPL Card Maker';
+  }, []);
+
   return (
     <div className={styles.app}>
       <BrowserRouter>

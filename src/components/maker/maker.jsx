@@ -7,7 +7,6 @@ import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
-  console.log('maker');
   const history = useHistory();
   const historyState = history?.location?.state;
   const [cards, setCards] = useState({});

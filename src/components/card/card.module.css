@@ -1,28 +1,44 @@
-@value makerBlack, makerWhite, makerColorful, makerWheat, makerShadow from '../../common/colors.css';
+@value makerBlack, makerWhite, makerColorful, makerWheat, makerShadow, makerArsenal, makerChelsea, makerLiverpool, makerLiverpool2, makerManUtd, makerManUtd2, makerManCity, makerTottenham from '../../common/colors.css';
 
 .card {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 0.5rem auto;
+  margin-bottom: 1em;
   text-align: left;
   padding: 0.2em 0;
   border-radius: 1em;
   box-shadow: 6px 6px 8px 0px makerShadow;
 }
 
-.card.dark {
-  background-color: makerBlack;
+.card.arsenal {
+  background-color: makerArsenal;
   color: makerWhite;
 }
 
-.card.light {
-  background-color: makerWhite;
-  color: makerBlack;
+.card.chelsea {
+  background-color: makerChelsea;
+  color: makerWhite;
 }
 
-.card.colorful {
-  background: makerColorful;
+.card.liverpool {
+  background: makerLiverpool;
+  color: makerLiverpool2;
+}
+
+.card.manutd {
+  background: makerManUtd;
+  color: makerManUtd2;
+}
+
+.card.mancity {
+  background: makerManCity;
+  color: makerWhite;
+}
+
+.card.tottenham {
+  background: makerTottenham;
+  color: makerWhite;
 }
 
 .image {
@@ -36,28 +52,38 @@
 }
 
 .info {
-  flex: 1 1 70%;
+  flex: 1 1 60%;
+}
+
+.clubImage {
+  flex: 1 1 10%;
+  width: 4em;
+  height: 4em;
+  padding: 1em;
+  border-radius: 50%;
+  margin-bottom: 6em;
 }
 
 .name,
-.company,
-.title,
-.email,
+.club,
+.nationality,
+.age,
 .message {
   margin: 0;
   font-size: 0.8rem;
   margin-bottom: 0.2em;
+  font-weight: bold;
 }
 
 .name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
-.company {
+.club {
   margin-bottom: 1em;
 }
 
-.company:after {
+.club:after {
   content: '';
   display: block;
   width: 90%;

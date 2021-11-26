@@ -3,7 +3,7 @@ import Button from '../button/button';
 import styles from './card_edit_form.module.css';
 
 const CardEditForm = ({ FileInput, card, onDelete, onUpdate }) => {
-  const { name, company, title, email, message, theme, fileName } = card;
+  const { name, nationality, age, message, theme, fileName } = card;
 
   const handleDelete = () => {
     onDelete(card);
@@ -30,35 +30,31 @@ const CardEditForm = ({ FileInput, card, onDelete, onUpdate }) => {
         value={name}
         onChange={handleUpdate}
       />
-      <input
-        className={styles.input}
-        type="text"
-        name="company"
-        value={company}
-        onChange={handleUpdate}
-      />
       <select
         className={styles.select}
         name="theme"
         value={theme}
         onChange={handleUpdate}
       >
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="colorful">Colorful</option>
+        <option value="Arsenal">Arsenal</option>
+        <option value="Chelsea">Chelsea</option>
+        <option value="Liverpool">Liverpool</option>
+        <option value="ManUtd">Manchester United</option>
+        <option value="ManCity">Manchester City</option>
+        <option value="Tottenham">Tottenham</option>
       </select>
       <input
         className={styles.input}
         type="text"
-        name="title"
-        value={title}
+        name="nationality"
+        value={nationality}
         onChange={handleUpdate}
       />
       <input
         className={styles.input}
         type="text"
-        name="email"
-        value={email}
+        name="age"
+        value={age}
         onChange={handleUpdate}
       />
       <textarea

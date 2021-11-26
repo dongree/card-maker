@@ -1,4 +1,4 @@
-@value makerGrey from './common/colors.css';
+@value makerViolet from './common/colors.css';
 
 * {
   box-sizing: border-box;
@@ -10,5 +10,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: makerGrey;
+  background-color: makerViolet;
 }
