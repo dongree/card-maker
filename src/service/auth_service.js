@@ -18,9 +18,10 @@ class AuthService {
   }
 
   onAuthChange(onUserChanged) {
-    this.firebaseAuth.onAuthStateChanged(user => {
+    const unsubscribe = this.firebaseAuth.onAuthStateChanged(user => {
       onUserChanged(user);
     });
+    return unsubscribe;
   }
 
   logout() {

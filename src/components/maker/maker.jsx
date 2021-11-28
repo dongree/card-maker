@@ -27,13 +27,14 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   }, [userId, cardRepository]);
 
   useEffect(() => {
-    authService.onAuthChange(user => {
+    const unsubscribe = authService.onAuthChange(user => {
       if (user) {
         setUserId(user.uid);
       } else {
         history.push('/');
       }
     });
+    return unsubscribe;
   }, [authService, userId, history]);
 
   const handleDelete = card => {
