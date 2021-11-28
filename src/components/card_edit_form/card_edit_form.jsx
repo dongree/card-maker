@@ -5,7 +5,8 @@ import styles from './card_edit_form.module.css';
 const CardEditForm = ({ FileInput, card, onDelete, onUpdate }) => {
   const { name, nationality, age, message, theme, fileName } = card;
 
-  const handleDelete = () => {
+  const handleDelete = e => {
+    e.preventDefault();
     onDelete(card);
   };
 
